@@ -5,8 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <DefaultNavigation loggedIn="no" />
-        Hello!
+      <DefaultNavigation loggedIn='false' />
     </div>
   );
 }
