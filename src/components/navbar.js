@@ -1,14 +1,21 @@
+import React from "react";
 import { Nav, Navbar, Form, Button } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-function DefaultNavigation(props) {
+function NavigationBar(props) {
     if(props.loggedIn === false) {
         return <>
-            <Navbar bg="light">
+            <Navbar bg="dark" variant="dark">
                 <Navbar.Brand>Hourkeeper</Navbar.Brand>
-                <Navbar.Toggle aria-controls="default-navbar" />
-                <Navbar.Collapse id="default-navbar">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <LinkContainer to="/">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/about">
+                            <Nav.Link>About</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                     <Form inline>
                         <Button variant="outline-success">Login</Button>
@@ -18,12 +25,14 @@ function DefaultNavigation(props) {
             </>}
     else {
         return <>
-            <Navbar bg="light">
+            <Navbar bg="dark" variant="dark">
                 <Navbar.Brand>Hourkeeper</Navbar.Brand>
-                <Navbar.Toggle aria-controls="default-navbar" />
-                <Navbar.Collapse id="default-navbar">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <LinkContainer to="/">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -31,4 +40,4 @@ function DefaultNavigation(props) {
     }
 }
 
-export default DefaultNavigation;
+export default NavigationBar;
