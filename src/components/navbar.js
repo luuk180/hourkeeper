@@ -18,7 +18,9 @@ function NavigationBar(props) {
                         </LinkContainer>
                     </Nav>
                     <Form inline>
-                        <Button variant="outline-success">Login</Button>
+                        <LinkContainer to="/login">
+                            <Button variant="outline-success">Login</Button>
+                        </LinkContainer>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
@@ -34,6 +36,11 @@ function NavigationBar(props) {
                             <Nav.Link>Home</Nav.Link>
                         </LinkContainer>
                     </Nav>
+                    <Form inline>
+                        <LinkContainer to="/logout">
+                            <Button variant="outline-danger">Logout</Button>
+                        </LinkContainer>
+                    </Form>
                 </Navbar.Collapse>
             </Navbar>
         </>
