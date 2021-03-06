@@ -3,7 +3,7 @@ import { Nav, Navbar, Form, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 function NavigationBar(props) {
-    if(props.loggedIn === false) {
+    if(props.loggedIn === "false") {
         return <>
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand>Hourkeeper</Navbar.Brand>
