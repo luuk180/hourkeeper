@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hourkeeper-dev-154130-authRole",
+      "UnauthRoleArn": "arn:aws:iam::442344428343:role/amplify-hourkeeper-dev-154130-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::442344428343:role/amplify-hourkeeper-dev-154130-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hourkeeper-dev-154130-deployment",
+      "UnauthRoleName": "amplify-hourkeeper-dev-154130-unauthRole",
+      "StackName": "amplify-hourkeeper-dev-154130",
+      "StackId": "arn:aws:cloudformation:us-east-1:442344428343:stack/amplify-hourkeeper-dev-154130/35b80e80-7f53-11eb-a089-0e51aa6fabf5",
+      "AmplifyAppId": "d3sblf7b3u24m2"
+    }
+  }
+}
