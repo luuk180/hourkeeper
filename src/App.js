@@ -4,7 +4,7 @@ import Home from './components/home'
 import About from './components/about'
 import Login from './components/login'
 import Logout from './components/logout'
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 import signup from './components/signup'
 
