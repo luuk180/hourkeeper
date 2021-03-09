@@ -10,6 +10,11 @@
       "StackName": "amplify-hourkeeper-dev-154130",
       "StackId": "arn:aws:cloudformation:us-east-1:442344428343:stack/amplify-hourkeeper-dev-154130/35b80e80-7f53-11eb-a089-0e51aa6fabf5",
       "AmplifyAppId": "d3sblf7b3u24m2"
+    },
+    "categories": {
+      "auth": {
+        "hourkeeper66ecdcbd": {}
+      }
     }
   }
 }

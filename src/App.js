@@ -4,8 +4,12 @@ import Home from './components/home'
 import About from './components/about'
 import Login from './components/login'
 import Logout from './components/logout'
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
 
 function App() {
+  Amplify.configure(awsconfig);
+  
   return (
     <div className="App">
       <header className="App-header">
