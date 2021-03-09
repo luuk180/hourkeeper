@@ -14,15 +14,15 @@ async function signIn(e) {
 }
 
 const Login = () => (
-    <div class="row">
-        <Form class="inputForm border border-primary">
-            <div class="form-group" flex-direction="column" align="center">
-                <input type="email" class="form-control" id="InputEmail" placeholder="Email address"></input>
+    <div className="row">
+        <Form className="inputForm border border-primary">
+            <div className="form-group" flex-direction="column" align="center">
+                <input type="email" className="form-control" id="InputEmail" placeholder="Email address"></input>
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="InputPassword" placeholder="Password"></input>
+            <div className="form-group">
+                <input type="password" className="form-control" id="InputPassword" placeholder="Password"></input>
             </div>
-            <Button type="submit" class="btn btn-primary" onClick={signIn()}>Login</Button>
+            <Button type="submit" className="btn btn-primary" onClick={signIn()}>Login</Button>
             <hr />
             <LinkContainer to="/signup">
                 <a>Sign up!</a>
