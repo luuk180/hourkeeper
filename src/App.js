@@ -6,6 +6,7 @@ import Login from './components/login'
 import Logout from './components/logout'
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
+import signup from './components/signup'
 
 function App() {
   Amplify.configure(awsconfig);
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/logout" component={Logout} />
+          <Route path="/signup" component={signup} />
         </Switch>
       </div>
     </div>

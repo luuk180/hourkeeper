@@ -2,15 +2,16 @@ import { Auth } from "aws-amplify"
 import React from "react";
 import { Form, Button } from "react-bootstrap"
 
-function signUp() {
-    const { user } = await Auth.signUp({
-        username,
-        password,
-        attributes: {
-            email
-        }
-    });
-    console.log(user);
+async function signUp(e) {
+    try {
+        const { user } = await Auth.signUp(
+            e.target.InputEmail,
+            e.target.inputPassword,
+        );
+        console.log(user);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 const signup = () => (
@@ -22,7 +23,7 @@ const signup = () => (
             <div class="form-group">
                 <input type="password" class="form-control" id="InputPassword" placeholder="Password"></input>
             </div>
-            <Button type="submit" class="btn btn-primary" onClick={signUp()}>Login</Button>
+            <Button type="submit" class="btn btn-primary" onClick={signUp()}>Sign up</Button>
         </Form>
     </div>
 )

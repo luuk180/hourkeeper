@@ -1,11 +1,12 @@
-import { Auth } from '@aws-amplify';
+import { Auth } from 'aws-amplify';
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import './login.css';
+import { LinkContainer } from 'react-router-bootstrap';
+import './login.scss';
 
-async function signIn() {
+async function signIn(e) {
     try {
-        const user = await Auth.signIn(username, password);
+        const user = await Auth.signIn(e.target.InputEmail, e.target.InputPassword);
         console.log(user)
     } catch (error) {
         console.log("An error occured ", error);
@@ -14,7 +15,7 @@ async function signIn() {
 
 const Login = () => (
     <div class="row">
-        <Form class="inputForm">
+        <Form class="inputForm border border-primary">
             <div class="form-group" flex-direction="column" align="center">
                 <input type="email" class="form-control" id="InputEmail" placeholder="Email address"></input>
             </div>
@@ -22,6 +23,10 @@ const Login = () => (
                 <input type="password" class="form-control" id="InputPassword" placeholder="Password"></input>
             </div>
             <Button type="submit" class="btn btn-primary" onClick={signIn()}>Login</Button>
+            <hr />
+            <LinkContainer to="/signup">
+                <a>Sign up!</a>
+            </LinkContainer>
         </Form>
     </div>
 )
