@@ -7,6 +7,7 @@ import Logout from './components/logout'
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 import signup from './components/signup'
+import signupconfirm from './components/signupconfirm'
 
 function App() {
   Amplify.configure(awsconfig);
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/logout" component={Logout} />
           <Route path="/signup" component={signup} />
+          <Route path="/confirm" component={signupconfirm} />
         </Switch>
       </div>
     </div>

@@ -21,8 +21,11 @@ async function signUp(e) {
             inputPasswordValue,
         );
         console.log(user);
+        alert(user);
+        alert("You have to confirm on hourkeeper.net/confirm");
     } catch (error) {
         console.log(error);
+        alert(error);
     }
 }
 

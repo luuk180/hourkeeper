@@ -20,7 +20,8 @@ async function signIn(e) {
         const user = await Auth.signIn(inputEmailValue, inputPasswordValue);
         console.log(user)
     } catch (error) {
-        console.log("An error occured ", error);
+        console.log(error);
+        alert(error);
     }
 }
 
