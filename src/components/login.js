@@ -21,7 +21,6 @@ async function signIn(e) {
         console.log(user)
     } catch (error) {
         console.log(error);
-        alert(error);
     }
 }
 
