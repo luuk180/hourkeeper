@@ -23,16 +23,19 @@ async function confirm(e) {
 }
 
 const signupconfirm = () => (
-    <div className="row">
-        <Form className="inputForm border border-primary">
-            <div className="form-group" flex-direction="column" align="center">
-                <input type="email" className="form-control" name="InputEmail" id="InputEmail" onChange={handleEmailChange} placeholder="Email address"></input>
-            </div>
-            <div className="form-group">
-                <input type="password" className="form-control" name="InputConfirm" id="InputConfirm" onChange={handleConfirmChange} placeholder="Confirmation code"></input>
-            </div>
-            <Button type="submit" className="btn btn-primary" onClick={confirm}>Sign up</Button>
-        </Form>
+    <div>
+        <NavigationBar loggedin="false" />
+        <div className="row">
+            <Form className="inputForm border border-primary">
+                <div className="form-group" flex-direction="column" align="center">
+                    <input type="email" className="form-control" name="InputEmail" id="InputEmail" onChange={handleEmailChange} placeholder="Email address"></input>
+                </div>
+                <div className="form-group">
+                    <input type="password" className="form-control" name="InputConfirm" id="InputConfirm" onChange={handleConfirmChange} placeholder="Confirmation code"></input>
+                </div>
+                <Button type="submit" className="btn btn-primary" onClick={confirm}>Confirm</Button>
+            </Form>
+        </div>
     </div>
 )
 

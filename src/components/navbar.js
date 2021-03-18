@@ -32,7 +32,7 @@ function NavigationBar(props) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <LinkContainer to="/">
+                        <LinkContainer to="/loggedin">
                             <Nav.Link>Home</Nav.Link>
                         </LinkContainer>
                     </Nav>

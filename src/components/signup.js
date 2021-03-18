@@ -1,8 +1,9 @@
 import { Auth } from "aws-amplify"
 import React from "react";
-import { Form, Button } from "react-bootstrap"
+import { Form, Button, Nav } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap";
 import './login.scss';
+import NavigationBar from "./navbar";
 
 let inputEmailValue;
 let inputPasswordValue;
@@ -29,19 +30,24 @@ const signup = props => {
         }
     }
     return(
-        <div className="row">
-            <Form className="inputForm border border-primary">
-                <div className="form-group" flex-direction="column" align="center">
-                    <input type="email" className="form-control" name="InputEmail" id="InputEmail" onChange={handleEmailChange} placeholder="Email address"></input>
+        <div>
+            <NavigationBar loggedin="false" />
+            <div>
+                <div className="row">
+                    <Form className="inputForm border border-primary">
+                        <div className="form-group" flex-direction="column" align="center">
+                            <input type="email" className="form-control" name="InputEmail" id="InputEmail" onChange={handleEmailChange} placeholder="Email address"></input>
+                        </div>
+                        <div className="form-group">
+                            <input type="password" className="form-control" name="InputPassword" id="InputPassword" onChange={handlePassChange} placeholder="Password"></input>
+                        </div>
+                        <Button type="submit" className="btn btn-primary" onClick={signUp}>Sign up</Button>
+                        <LinkContainer to="/confirm">
+                            <Button type="submit" className="btn btn-secondary">Confirm page</Button>
+                        </LinkContainer>
+                    </Form>
                 </div>
-                <div className="form-group">
-                    <input type="password" className="form-control" name="InputPassword" id="InputPassword" onChange={handlePassChange} placeholder="Password"></input>
-                </div>
-                <Button type="submit" className="btn btn-primary" onClick={signUp}>Sign up</Button>
-                <LinkContainer to="/confirm">
-                    <Button type="submit" className="btn btn-secondary">Confirm page</Button>
-                </LinkContainer>
-            </Form>
+            </div>
         </div>
     )
 }
